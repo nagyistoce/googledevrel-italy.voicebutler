@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_basicActivity"
+    android:orientation="vertical"
+>
+
+    <Button
+        android:id="@+id/actMainMenu_btnCheckTTS"
+        style="@style/actMainMenu_btnCommand"
+        android:text="@string/actMainMenu_btnCheckTTS"
+    />
+
+    <Button
+        android:id="@+id/actMainMenu_btnReadText"
+        style="@style/actMainMenu_btnCommand"
+        android:text="@string/actMainMenu_btnReadText"
+    />
+    
+    <Button
+        android:id="@+id/actMainMenu_btnSimpleRecognition"
+        style="@style/actMainMenu_btnCommand"
+        android:text="@string/actMainMenu_btnSimpleRecognition"
+    />
+    
+    <Button
+        android:id="@+id/actMainMenu_btnVoiceCommands"
+        style="@style/actMainMenu_btnCommand"
+        android:text="@string/actMainMenu_btnVoiceCommands"
+    />
+    
+</LinearLayout>

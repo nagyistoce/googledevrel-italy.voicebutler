@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_basicActivity"
+    android:orientation="vertical"
+>
+
+    <TextView
+        style="@style/actTTSResources_txtListLabel"
+        android:text="@string/actTTSResources_lblAvailableLanguages"
+    />
+    <ListView
+        android:id="@+id/actTTSResources_lstAvailable"
+        style="@style/actTTSResources_lstLanguages"
+    />
+    
+    <TextView
+        style="@style/actTTSResources_txtListLabel"
+        android:layout_marginTop="@dimen/common_normalSeparator"
+        android:text="@string/actTTSResources_lblUnavailableLanguages"
+    />
+    <ListView
+        android:id="@+id/actTTSResources_lstUnavailable"
+        style="@style/actTTSResources_lstLanguages"
+    />
+    
+    <Button
+        android:id="@+id/actTTSResources_btnDownloadMore"
+        style="@style/common_basicButton"
+        android:layout_marginTop="@dimen/common_normalSeparator"
+        android:text="@string/actTTSResources_btnDownloadMore"
+    />
+
+
+</LinearLayout>

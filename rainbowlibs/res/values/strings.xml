@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="common_appName">RainbowLibs</string>
+    <string name="common_btnOk">@android:string/ok</string>
+    <string name="common_btnYes">Yes</string>
+    <string name="common_btnNo">No</string>
+    <string name="common_btnCancel">Cancel</string>
+    <string name="common_mnuSave">Save</string>
+    <string name="common_mnuCancel">Cancel</string>
+    <string name="common_msgArchitecturalError">Inner application error:\n%s\n\nPlease, report it to the developer.</string>
+    <string name="common_msgCommunicationError">Generic communication error:\n%s\n\nNetwork issues, or maybe the server has problem or is down.</string>
+    <string name="common_msgExecutingCommand">Executing command.</string>
+    <string name="common_msgAppExpiredError">Application expired</string>
+    <string name="common_msgGenericError">Generic error: %s</string>
+    <string name="common_msgNoErrorMessage">No error result code managed.</string>
+    
+    <string name="common_msgCannotStartMarketIntent">Sorry, i cannot launch Android Market on this device</string>
+    
+    <string name="common_sendEmailChooser">Select email application</string>
+    <string name="common_sendlogSubject">Log %s</string>
+    <string name="common_sendlogBody">Dear developer,\n I\'m sending application log because (add here report cause / problem encountered)\n\n\n%s</string>
+    
+</resources>
