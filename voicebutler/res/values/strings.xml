@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">Voice Butler</string>
+    <string name="common_msgListeningError">Speech not recognized, sorry :(</string>
+    
+    <string name="actMainMenu_title">Voice Butler</string>
+    <string name="actMainMenu_btnCheckTTS">Check TTS capabilities</string>
+    <string name="actMainMenu_btnReadText">Read written text</string>
+    <string name="actMainMenu_btnSimpleRecognition">Simple speech recogntion</string>
+    <string name="actMainMenu_btnVoiceCommands">Voice commands</string>
+    
+    <string name="actTTSResources_title">TTS Resources</string>
+    <string name="actTTSResources_lblAvailableLanguages">Available languages</string>
+    <string name="actTTSResources_lblUnavailableLanguages">Missing languages</string>
+    <string name="actTTSResources_btnDownloadMore">Download more languages</string>
+    <string name="actTTSResources_msgErrorProcessingData">Error processing TTS data: %s</string>
+    
+    <string name="actReadText_title">Read what\'s written</string>
+    <string name="actReadText_txtWordsHint">Put your words here</string>
+    <string name="actReadText_btnRead">Read!</string>
+    <string name="actReadText_msgEmptyMessage">Sorry, no text to read</string>
+    <string name="actReadText_msgNoLanguageAvailable">Sorry, no Italian language available</string>
+    <string name="actReadText_msgLanguageInitializationFailed">Sorry, the Italian language initialization has failed</string>
+    <string name="actReadText_msgNoTTSEngine">No TTS engine found!</string>
+
+    <string name="actSimpleRecognition_title">Basic recognition</string>
+    <string name="actSimpleRecognition_lblNoSpeechRecognition">No speech recognize engine available, sorry :(</string>
+    <string name="actSimpleRecognition_btnWordsRecognition">Start words recognition</string>
+    <string name="actSimpleRecognition_btnWordsRecognitionEn">Start words recognition - English</string>
+    <string name="actSimpleRecognition_btnWebSearch">Start web search</string>
+    <string name="actSimpleRecognition_msgSaySomething">Tell me what you want!</string>
+    
+    <string name="actVoiceCommands_title">At your order, master</string>
+    <string name="actVoiceCommands_btnListenCommand">Listen for a command</string>
+    <string name="actVoiceCommands_msgWaitForCommands">Cosa posso fare per te?</string>
+    <string name="actVoiceCommands_msgUnknowCommand">Comando sconosciuto, mi dispiace!</string>
+    
+</resources>

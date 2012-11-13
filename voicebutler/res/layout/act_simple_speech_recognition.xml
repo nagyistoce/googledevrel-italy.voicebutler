@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/common_basicActivity"
+    android:orientation="vertical"
+>
+
+    <Button
+        android:id="@+id/actSimpleSpeechRecognition_btnWebSearch"
+        style="@style/common_basicButton"
+        android:layout_marginTop="@dimen/common_normalSeparator"
+        android:text="@string/actSimpleRecognition_btnWebSearch"
+    />
+    
+    <Button
+        android:id="@+id/actSimpleSpeechRecognition_btnWordsRecognition"
+        style="@style/common_basicButton"
+        android:text="@string/actSimpleRecognition_btnWordsRecognition"
+    />
+    
+    <Button
+        android:id="@+id/actSimpleSpeechRecognition_btnWordsRecognitionEn"
+        style="@style/common_basicButton"
+        android:text="@string/actSimpleRecognition_btnWordsRecognitionEn"
+    />
+    
+    <ListView
+        android:id="@+id/actSimpleSpeechRecognition_lstWords"
+        style="@style/common_basicListView"
+        android:layout_marginTop="@dimen/common_normalSeparator"
+    />
+
+
+</LinearLayout>
