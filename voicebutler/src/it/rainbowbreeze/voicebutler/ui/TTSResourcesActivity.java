@@ -94,13 +94,15 @@ public class TTSResourcesActivity extends Activity {
         boolean voicesFound = false;
         
         switch (resultCode) {
-        //great, all languages are installed
+        //optimum, all languages are installed
         case TextToSpeech.Engine.CHECK_VOICE_DATA_PASS:
+            mLogFacility.v(LOG_HASH, "All languages available");
+            mBtnDownloadMore.setEnabled(false);
+
         //only some languages are installed
         case TextToSpeech.Engine.CHECK_VOICE_DATA_MISSING_DATA:
-            mLogFacility.v(LOG_HASH, "Some or all languages available, someothers no");
+            mLogFacility.v(LOG_HASH, "Some languages available, someothers no");
             mBtnDownloadMore.setEnabled(true);
-            voicesFound = true;
             break;
 
         //mmmm... some sort of troubles :(
@@ -120,18 +122,17 @@ public class TTSResourcesActivity extends Activity {
         }
         
         if (voicesFound) {
+            //populated listview with languages
             ArrayList<String> availableVoices = 
                     data.getStringArrayListExtra(TextToSpeech.Engine.EXTRA_AVAILABLE_VOICES);
+            mLstAvailable.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, availableVoices));
+
             ArrayList<String> unavailableVoices = 
                     data.getStringArrayListExtra(TextToSpeech.Engine.EXTRA_UNAVAILABLE_VOICES);
-
-            //populated listview with languages
-            mLstAvailable.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, availableVoices));
             mLstUnavailable.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, unavailableVoices));
         }
     }
 
 
     // ----------------------------------------- Private Classes
-    
 }

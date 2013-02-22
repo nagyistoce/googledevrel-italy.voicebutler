@@ -45,17 +45,17 @@ public class SpeechManager {
      */
     public boolean isSpeechRecognitionAvailable(Context context) {
         //find out whether speech recognition is supported
-        PackageManager packManager = context.getPackageManager();
-        List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
-        if (intActivities.size() != 0) {
-            //speech recognition is supported
-            return true;
-        }
-        else
-        {
-            //speech recognition not supported
-            return false;
-        }        
+          PackageManager packManager = context.getPackageManager();
+          List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+          if (intActivities.size() != 0) {
+              //speech recognition is supported
+              return true;
+          }
+          else
+          {
+              //speech recognition not supported
+              return false;
+          }        
     }
 
     /**

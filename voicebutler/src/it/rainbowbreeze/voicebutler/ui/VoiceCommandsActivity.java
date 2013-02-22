@@ -104,7 +104,7 @@ public class VoiceCommandsActivity extends Activity {
         if (containsWord(suggestedWords, "tempo") >= 0) {
             mLogFacility.v(LOG_HASH, "tempo");
             mTxtCommand.setText(suggestedWords.get(0));
-            saySomething("Che ci stai a fare qui dentro, esci e vai a fare un giro in questo bel verde");
+            saySomething("Che ci stai a fare qui dentro, esci e vai a fare un giro all'aperto!");
             startListeningCommands(true);
         } else if (containsWord(suggestedWords, "ragazzi") >= 0) {
             mLogFacility.v(LOG_HASH, "ragazzi");

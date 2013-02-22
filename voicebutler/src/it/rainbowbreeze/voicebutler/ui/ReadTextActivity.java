@@ -1,11 +1,10 @@
 package it.rainbowbreeze.voicebutler.ui;
 
+import java.util.Locale;
+
 import it.rainbowbreeze.voicebutler.R;
 import it.rainbowbreeze.voicebutler.common.AppEnv;
 import it.rainbowbreeze.voicebutler.common.LogFacility;
-
-import java.util.Locale;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -146,4 +145,5 @@ public class ReadTextActivity extends Activity {
         }
     };
         
+    // ----------------------------------------- Private Classes
 }
