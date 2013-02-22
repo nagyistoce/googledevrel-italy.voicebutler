@@ -45,17 +45,17 @@ public class SpeechManager {
      */
     public boolean isSpeechRecognitionAvailable(Context context) {
         //find out whether speech recognition is supported
-          PackageManager packManager = context.getPackageManager();
-          List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
-          if (intActivities.size() != 0) {
-              //speech recognition is supported
-              return true;
-          }
-          else
-          {
-              //speech recognition not supported
-              return false;
-          }        
+        PackageManager packManager = context.getPackageManager();
+        List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+        if (intActivities.size() != 0) {
+            //speech recognition is supported
+            return true;
+        }
+        else
+        {
+            //speech recognition not supported
+            return false;
+        }        
     }
 
     /**
@@ -99,12 +99,12 @@ public class SpeechManager {
     }
     
     /**
-     * Initializes the global Text-To-Speech engine
+     * Retrieves resources used by the current TTS engine.
      * 
      * @param activity
      * @param requestCode
      */
-    public void initTTSEngine(Activity activity, int requestCode) {
+    public void retrieveTTSEngineResources(Activity activity, int requestCode) {
         //prepare the TTS to repeat chosen words
         Intent checkTTSIntent = new Intent();
         //check TTS data
@@ -120,7 +120,7 @@ public class SpeechManager {
      * @param listener
      * @return
      */
-    public TextToSpeech createTextToSpeech(Context context, TextToSpeech.OnInitListener listener) {
+    public TextToSpeech createTTSEngine(Context context, TextToSpeech.OnInitListener listener) {
         TextToSpeech textToSpeech = new TextToSpeech(context, listener);
         return textToSpeech;
     }

@@ -4,12 +4,6 @@
     android:orientation="vertical"
 >
 
-    <TextView
-        android:id="@+id/actReadText_lblLanguageUnavailable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    />
-    
     <EditText
         android:id="@+id/actReadText_txtInput"
         android:layout_width="match_parent"
@@ -23,6 +17,5 @@
         style="@style/common_basicButton"
         android:text="@string/actReadText_btnRead"
     />
-
 
 </LinearLayout>

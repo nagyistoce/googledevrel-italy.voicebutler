@@ -65,7 +65,7 @@ public class VoiceCommandsActivity extends Activity {
         mTxtCommand = (TextView) findViewById(R.id.actVoiceCommands_lblCommand);
 
         //launches TTS engine initialization
-        mSpeechManager.initTTSEngine(this, REQUEST_TTS_CHECK);
+        mSpeechManager.retrieveTTSEngineResources(this, REQUEST_TTS_CHECK);
     }
 
 
@@ -167,7 +167,7 @@ public class VoiceCommandsActivity extends Activity {
         if (isItalianAvailable) {
             //OK, ready to use the TTS!
             mLogFacility.v(LOG_HASH, "Ok, italian language installed, proceed to TTS inizialization");
-            mTextToSpeech = mSpeechManager.createTextToSpeech(getApplicationContext(), mTextToSpeechListener);
+            mTextToSpeech = mSpeechManager.createTTSEngine(getApplicationContext(), mTextToSpeechListener);
             startListeningCommands(false);
         } else {
             mLogFacility.i(LOG_HASH, "Cannot find italian language installed");
