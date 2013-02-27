@@ -45,17 +45,30 @@ public class SpeechManager {
      */
     public boolean isSpeechRecognitionAvailable(Context context) {
         //find out whether speech recognition is supported
-          PackageManager packManager = context.getPackageManager();
-          List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
-          if (intActivities.size() != 0) {
-              //speech recognition is supported
-              return true;
-          }
-          else
-          {
+        PackageManager packManager = context.getPackageManager();
+        List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+        if (intActivities.size() != 0) {
+            //speech recognition is supported
+            return true;
+        } else {
               //speech recognition not supported
               return false;
           }        
+    }
+
+    public Intent createSpeechRecognitionIntent(String callingPackage) {
+        //start the speech recognition intent passing required data
+        Intent recognitionIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        //set calling package
+        recognitionIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, callingPackage);
+        //set speech model
+        // LANGUAGE_MODEL_WEB_SEARCH : For short phrases
+        // LANGUAGE_MODEL_FREE_FORM  : for something more similar to a free-form voice search (a natural sentence)
+        recognitionIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        //specify max number of results to retrieve
+        recognitionIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
+        
+        return recognitionIntent;
     }
 
     /**
@@ -70,20 +83,14 @@ public class SpeechManager {
      */
     public void listenToSpeech(Activity activity, String prompt, String ieft_language, int requestCode) {
         //start the speech recognition intent passing required data
-        Intent listenIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        //indicate package
-        listenIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, activity.getClass().getPackage().getName());
+        Intent recognitionIntent = createSpeechRecognitionIntent(activity.getClass().getPackage().getName());
         //message to display while listening
-        listenIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, prompt);
+        recognitionIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, prompt);
         if (!TextUtils.isEmpty(ieft_language)) {
-            listenIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, ieft_language);
+            recognitionIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, ieft_language);
         }
-        //set speech model
-        listenIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
-        //specify number of results to retrieve
-        listenIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
         //start listening
-        activity.startActivityForResult(listenIntent, requestCode);
+        activity.startActivityForResult(recognitionIntent, requestCode);
     }
     
     /**
@@ -135,8 +142,9 @@ public class SpeechManager {
         installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
         activity.startActivityForResult(installTTSIntent, requestCode);
     }
-
+    
     // ----------------------------------------- Private Methods
 
     // ----------------------------------------- Private Classes
 }
+

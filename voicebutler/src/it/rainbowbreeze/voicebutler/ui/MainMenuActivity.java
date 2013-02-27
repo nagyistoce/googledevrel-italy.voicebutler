@@ -58,6 +58,11 @@ public class MainMenuActivity extends Activity {
                 mActivityHelper.openVoiceCommands(MainMenuActivity.this);
             }
         });
+        assignMenuAction(R.id.actMainMenu_btnBackgroundRecognition, new View.OnClickListener() {
+            public void onClick(View v) {
+                mActivityHelper.openBackgroundRecognition(MainMenuActivity.this);
+            }
+        });
     }
 
     // ------------------------------------------ Public Methods

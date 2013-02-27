@@ -28,4 +28,10 @@
         android:text="@string/actMainMenu_btnVoiceCommands"
     />
     
+    <Button
+        android:id="@+id/actMainMenu_btnBackgroundRecognition"
+        style="@style/actMainMenu_btnCommand"
+        android:text="@string/actMainMenu_btnBackgroundRecognition"
+    />
+    
 </LinearLayout>

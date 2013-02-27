@@ -8,6 +8,7 @@
     <string name="actMainMenu_btnReadText">Read written text</string>
     <string name="actMainMenu_btnSimpleRecognition">Simple speech recogntion</string>
     <string name="actMainMenu_btnVoiceCommands">Voice commands</string>
+    <string name="actMainMenu_btnBackgroundRecognition">Background recognition</string>
     
     <string name="actTTSResources_title">TTS Resources</string>
     <string name="actTTSResources_lblAvailableLanguages">Available languages</string>
@@ -28,7 +29,11 @@
     <string name="actSimpleRecognition_btnWordsRecognition">Start words recognition</string>
     <string name="actSimpleRecognition_btnWordsRecognitionEn">Start words recognition - English</string>
     <string name="actSimpleRecognition_btnWebSearch">Start web search</string>
-    <string name="actSimpleRecognition_msgSaySomething">Tell me what you want!</string>
+    <string name="actSimpleRecognition_msgSaySomething">Talk to me (custom message)</string>
+    
+    <string name="actBackgroundRecognition_title">Background recognition</string>
+    <string name="actBackgroundRecognition_btnStartRecognition">Start recognition</string>
+    <string name="actBackgroundRecognition_lblResultsTitle">You say:</string>
     
     <string name="actVoiceCommands_title">At your order, master</string>
     <string name="actVoiceCommands_btnListenCommand">Listen for a command</string>

@@ -40,6 +40,10 @@ public class ActivityHelper extends RainbowActivityHelper {
         openActivity(callerActivity, VoiceCommandsActivity.class, null, false, REQUESTCODE_NONE);
     }
 
+    public void openBackgroundRecognition(Activity callerActivity) {
+        openActivity(callerActivity, BackgroundSpeechRecognitionActivity.class, null, false, REQUESTCODE_NONE);
+    }
+
     // ----------------------------------------- Private Methods
 
     // ----------------------------------------- Private Classes
