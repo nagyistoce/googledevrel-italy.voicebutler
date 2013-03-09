@@ -97,12 +97,15 @@ public class TTSResourcesActivity extends Activity {
         //optimum, all languages are installed
         case TextToSpeech.Engine.CHECK_VOICE_DATA_PASS:
             mLogFacility.v(LOG_HASH, "All languages available");
-            mBtnDownloadMore.setEnabled(false);
+            mBtnDownloadMore.setEnabled(true);
+            voicesFound = true;
+            break;
 
         //only some languages are installed
         case TextToSpeech.Engine.CHECK_VOICE_DATA_MISSING_DATA:
             mLogFacility.v(LOG_HASH, "Some languages available, someothers no");
             mBtnDownloadMore.setEnabled(true);
+            voicesFound = true;
             break;
 
         //mmmm... some sort of troubles :(

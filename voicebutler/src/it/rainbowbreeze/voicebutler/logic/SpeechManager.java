@@ -46,7 +46,8 @@ public class SpeechManager {
     public boolean isSpeechRecognitionAvailable(Context context) {
         //find out whether speech recognition is supported
         PackageManager packManager = context.getPackageManager();
-        List<ResolveInfo> intActivities = packManager.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+        List<ResolveInfo> intActivities = packManager.queryIntentActivities(
+                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
         if (intActivities.size() != 0) {
             //speech recognition is supported
             return true;
@@ -64,7 +65,8 @@ public class SpeechManager {
         //set speech model
         // LANGUAGE_MODEL_WEB_SEARCH : For short phrases
         // LANGUAGE_MODEL_FREE_FORM  : for something more similar to a free-form voice search (a natural sentence)
-        recognitionIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        recognitionIntent.putExtra(
+                RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         //specify max number of results to retrieve
         recognitionIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
         

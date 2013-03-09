@@ -176,7 +176,8 @@ public class BackgroundSpeechRecognitionActivity extends Activity {
             mLogFacility.v(LOG_HASH, "Received speech recognition final result");
             
             //EXTRA is different
-            ArrayList<String> suggestedWords = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+            ArrayList<String> suggestedWords = results.getStringArrayList(
+                    SpeechRecognizer.RESULTS_RECOGNITION);
             //scores available, but only for API 14
             //float[] scores = results.getFloatArray(RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
             for(String sentence : suggestedWords) {

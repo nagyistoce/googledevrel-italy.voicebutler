@@ -126,8 +126,10 @@ public class SimpleSpeechRecognitionActivity extends Activity {
         }
         
         //stores the returned word list as an ArrayList
-        ArrayList<String> suggestedWords = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-        float[] scores = data.getFloatArrayExtra(RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
+        ArrayList<String> suggestedWords = data.getStringArrayListExtra(
+                RecognizerIntent.EXTRA_RESULTS);
+        float[] scores = data.getFloatArrayExtra(
+                RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
         mWordsListAdapter.clear();
         for (int i=0; i<suggestedWords.size(); i++) {
             String word = suggestedWords.get(i);
